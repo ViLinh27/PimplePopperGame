@@ -53,3 +53,23 @@ Font: Pixelify Sans from fonts.google.com
 ## Only 1 pimple showing up randomly on the face instead of 5 and the interval disappearing doesn't seem to work
 
 There was a typo, instead of using the actually defined maxH to help get the random Y position for a pimple, I used maxY instead (which is never defined.)
+
+## Preventing the pimples from overlapping
+
+So when a pimple appears, the position needs to be compared to every previous pimple so that the positions don't overlap (considering that each pimple is 50 x 50 px).
+
+### Things that need to be considered to make the pimple collision detection work
+
+- minimum seperation distance: since each pimple is 50x50,a distance of 70x70 will make sure there's a 20px distance and so forth. I'll try 60 first and see how that goes.
+- put the working pimples in an array: every successfully placed pimple gets put in an array for comparing
+- make position to check after: when making a random position for a pimple, either enter that in a loop or make a recursive call that checks the current pimple position to any stored position in the pimple loop
+- if overlapping, position needs to be redone: if a current pimple position is too close to an existing position in the array, get rid of it to make a new one, repeat until good spot made.
+
+### Distance (separation) formula
+
+Standard formula for distance is useful here which makes sense in hindsight.
+'''
+d=sqrt( (x2 -x1)^2 + (y2-y1)^2 )
+'''
+
+If distance calculated from formula is less than minimum, we have an overlap
