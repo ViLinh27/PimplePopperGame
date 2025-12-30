@@ -3,7 +3,7 @@
     background-color: rgb(214, 206, 248);//change later
 }
 .pixelify-sans-myFont {
-    background-color: red;//change 
+    //background-color: red;//change 
     //-- fonts --//
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
@@ -21,7 +21,7 @@
     align-content: center;
 }
 .content-wrapper{
-    background-color: yellow;//change later
+    background-color: transparent;
     //-- display --//
     display: flex;
     flex-direction: column;
@@ -32,10 +32,21 @@
     height:95vh;
     width:95%;
 }
+.face-container{
+    //background-color: red;
+    background-image: url('https://placehold.co/600x400');
+    background-size: contain;
+    position: relative;//children (pimples container)
+    overflow: hidden;
+    width:400px;
+    height:500px;
+}
 .face{
     z-index: 0;
 }
 .pimples{
     z-index:1;
+    position: absolute;//so we can use top and left
     background-color: pink;//change later
+    transition: top 0.5s, left 0.5s;
 }

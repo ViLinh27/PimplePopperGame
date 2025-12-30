@@ -4,7 +4,6 @@
 }
 
 .pixelify-sans-myFont {
-  background-color: red;
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -20,7 +19,7 @@
 }
 
 .content-wrapper {
-  background-color: yellow;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,11 +29,22 @@
   width: 95%;
 }
 
+.face-container {
+  background-image: url("https://placehold.co/600x400");
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 500px;
+}
+
 .face {
   z-index: 0;
 }
 
 .pimples {
   z-index: 1;
+  position: absolute;
   background-color: pink;
+  transition: top 0.5s, left 0.5s;
 }/*# sourceMappingURL=mainStyles.css.map */

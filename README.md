@@ -45,3 +45,11 @@ Actual game logic will be done here. Which include:
 # Credits
 
 Font: Pixelify Sans from fonts.google.com
+
+---
+
+# Issues
+
+## Only 1 pimple showing up randomly on the face instead of 5 and the interval disappearing doesn't seem to work
+
+There was a typo, instead of using the actually defined maxH to help get the random Y position for a pimple, I used maxY instead (which is never defined.)
