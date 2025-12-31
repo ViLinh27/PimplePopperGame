@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     //screens
     const mainscreen = document.getElementById('start-screen');
     const gamescreen = document.getElementById('game-screen');
+    const creditsscreen = document.getElementById('credits-screen');
     //screen buttons
-    const snoozeTimerBtn = document.getElementById('snooze-btn');
     const stopBtn = document.getElementById('stop-btn');
     const startBtn = document.getElementById('start-btn');
+    const backBtn = document.getElementById('back-btn');
+    const creditsBtn = document.getElementById('credits-btn');
 
     startBtn.addEventListener('click',()=>{
         showScreen('game');
@@ -15,29 +17,20 @@ document.addEventListener('DOMContentLoaded',()=>{
         //show main screen;
         showScreen('main');
     });
+    backBtn.addEventListener('click',()=>{
+        showScreen('main');
+    })
+    creditsBtn.addEventListener('click',()=>{
+        showScreen('credits');
+    })
 
     function showScreen(screenName){
         mainscreen.style.display = 'none';
         gamescreen.style.display = 'none';
+        creditsscreen.style.display = 'none';
 
         if(screenName === 'main') mainscreen.style.display = 'block'
         if(screenName === 'game') gamescreen.style.display = 'block'
-    }
-
-    //Timer stuff
-    const timerDisplay = document.querySelector('.timer-display');
-    let timer;
-    let timeLeft= 0;
-    let remainingTimeWhenPaused = 0;
-    let isPaused = false;
-    let ringSound = null;
-
-    function togglePause(){
-        isPaused = !isPaused;
-        snoozeTimerBtn.textContent = isPaused ? 'Resume' : 'Pause';
-
-        if(isPaused){
-            remainingTimeWhenPaused = timeLeft;
-        }
+        if(screenName === 'credits') creditsscreen.style.display = 'block'
     }
 });
