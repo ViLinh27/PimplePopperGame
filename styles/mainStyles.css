@@ -18,6 +18,7 @@
   align-content: center;
 }
 
+/*Screen content*/
 .content-wrapper {
   background-color: transparent;
   display: flex;
@@ -27,8 +28,18 @@
   align-content: center;
   height: 95vh;
   width: 95%;
+  position: relative;
 }
 
+#start-screen {
+  display: block;
+}
+
+#game-screen {
+  display: none;
+}
+
+/*end of Screen content*/
 .face-container {
   background-image: url("https://placehold.co/600x400");
   background-size: contain;
@@ -38,6 +49,7 @@
   height: 500px;
 }
 
+/* face and pimple content*/
 .face {
   z-index: 0;
 }

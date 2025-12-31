@@ -14,10 +14,36 @@
     <body>
         <div class="pixelify-sans-myFont">
             <div class="content-wrapper">
-                <h1>Timer goes here</h1>
-                <div class="face-container" id="faceContainer">
-                    <!-- face goes ehre-->
-                </div>
+                <!-- start screen-->
+                 <div id="start-screen">
+                    <div class="interactive-content">
+                        <h2>It's pimple popping time</h2>
+                        <button id="start-btn">
+                            <p>Start Popping</p>
+                        </button>
+                    </div>
+                 </div><!-- start screen-->
+
+                <!-- game screen-->
+                <div id="game-screen">
+                    <!--timer clock -->
+                    <div class="interactive-content">
+                        <div class="timer-display">
+                            <h1>00:00</h1>
+                        </div>
+                        <div class="timer-controls">
+                            <button id="snooze-btn">
+                                <p class="btn-text">Snooze</p>
+                            </button>
+                            <button id="stop-btn">
+                                <p class="btn-text">Stop</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="face-container" id="faceContainer">
+                        <!-- face goes ehre-->
+                    </div>
+                </div><!-- game screen-->
             </div>
         </div>
         <script src="./js-effects/mainEffects.js"></script>

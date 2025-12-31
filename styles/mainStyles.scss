@@ -20,6 +20,7 @@
     align-items: center;
     align-content: center;
 }
+/*Screen content*/
 .content-wrapper{
     background-color: transparent;
     //-- display --//
@@ -31,7 +32,16 @@
     //-- windwo size --//
     height:95vh;
     width:95%;
+    position: relative;
 }
+#start-screen{
+    display:block;
+}
+#game-screen{
+    display: none;
+}
+/*end of Screen content*/
+
 .face-container{
     //background-color: red;
     background-image: url('https://placehold.co/600x400');
@@ -41,6 +51,7 @@
     width:400px;
     height:500px;
 }
+/* face and pimple content*/
 .face{
     z-index: 0;
 }
@@ -50,3 +61,5 @@
     background-color: pink;//change later
     transition: top 0.5s, left 0.5s;
 }
+
+

@@ -77,5 +77,9 @@ If distance calculated from formula is less than minimum, we have an overlap
 ### First attempt at collision detector: FAILED
 
 - #### Incorrect var ref in collision check (looks like the main issue)
-  - inside the while loop, it looks like the wrong name got referrenced. I was calling a method when i meant to call an array to the isOverlap method. So typo basically since the names are similar
-  - I wasn't iterating the right counter inside one of the loops to count the number of attempts made to place the pimples correctly. So another typo
+
+* inside the while loop, it looks like the wrong name got referrenced. I was calling a method when i meant to call an array to the isOverlap method. So typo basically since the names are similar
+
+- #### Wrong counter in attempt to place pimples loop
+
+* I wasn't iterating the right counter inside one of the loops to count the number of attempts made to place the pimples correctly. So another typo
