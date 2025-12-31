@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 newX = getRndPos(maxX);
                 newY = getRndPos(maxY);
 
-                if (!isOverlap(newX, newY, placeRndPimples)){
+                if (!isOverlap(newX, newY, placedPimples)){
                     safePos = true;
                 }
-                attempts++;
+                attemptsPlaces++;
             }
 
             if (safePos){
