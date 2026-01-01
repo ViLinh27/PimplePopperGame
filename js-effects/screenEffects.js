@@ -6,7 +6,7 @@ const gameoverscreen = document.getElementById('gameover-screen');
 //screen buttons
 const stopBtn = document.getElementById('stop-btn');
 const startBtn = document.getElementById('start-btn');
-const backBtn = document.getElementById('back-btn');
+const backBtns = document.querySelectorAll('.back-btn');
 const creditsBtn = document.getElementById('credits-btn');
 
 const GAME_DURATION = 10; //change later
@@ -28,8 +28,10 @@ stopBtn.addEventListener('click',()=>{
     //show main screen;
     showScreen('main');
 });
-backBtn.addEventListener('click',()=>{
-    showScreen('main');
+backBtns.forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        showScreen('main');
+    })
 })
 creditsBtn.addEventListener('click',()=>{
     showScreen('credits');
