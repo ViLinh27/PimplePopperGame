@@ -116,3 +116,5 @@ make a function to handle score display to streamline the updating display in 2 
 add a pimple.remove() inside the click handler
 
 ## The score will not reset on next round
+
+with the new update score dsiplay function, that gets called in a reset score dsiplay function and that reset function goes into the back buttons that take you back to home. I tried putting it in either start or the stop buttons. That didn't work.
