@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         return Math.floor(Math.random() * max);
     }//getRndPos(max)
 
-    /**
-     * Checks if a new pos overlaps with existing pimple pos.
-     * parameter x  - curr X coordinate.
-     * parameter y - curr Y coordinate.
-     * array existingPimples - Array of already placed coordinates {x, y}.
-     * method below returns {boolean} True if overlapping, false otherwise.
-     */
+    
+    //Checks if a new pos overlaps with existing pimple pos.
+    //parameter x  - curr X coordinate.
+    //parameter y - curr Y coordinate.
+    //array existingPimples - Array of already placed coordinates {x, y}.
+    //method below returns {boolean} True if overlapping, false otherwise.
+     
     function isOverlap(x,y,existingPimples){
         //loop to go through existing pimples and find distance
         for(const existing of existingPimples){
