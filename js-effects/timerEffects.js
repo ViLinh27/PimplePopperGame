@@ -1,6 +1,6 @@
 const snoozeTimerBtn = document.getElementById('snooze-btn');
 //Timer stuff
-const timerDisplay = document.querySelector('.timer-display');
+const timerDisplay = document.querySelector('.timer-display h1');
 let timer;
 let timeLeft= 0;
 let remainingTimeWhenPaused = 0;
@@ -16,7 +16,7 @@ function togglePause(){
     }
 }
 
-function timerCountdown(timerduration){
+function timerCountdown(timerduration, callback){
     duration = timerduration || 10;//change later
     clearInterval(timer);
 
@@ -31,9 +31,10 @@ function timerCountdown(timerduration){
 
             if(timeLeft<=0){
                 //play alarm sound
-                new Notification('Popping Pimples', {
-                    body: 'You are done.'//change later
-                });
+                clearInterval(timer);
+                if(typeof callback === 'function'){
+                    callback();
+                }
                 //show start screen again??
             }
         }

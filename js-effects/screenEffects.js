@@ -13,7 +13,11 @@ const GAME_DURATION = 10; //change later
 startBtn.addEventListener('click',()=>{
     showScreen('game');
     if (typeof timerCountdown === 'function') {
-        timerCountdown(GAME_DURATION); 
+        timerCountdown(GAME_DURATION, ()=>{
+            //make a game over screen
+            showScreen('main');
+            console.log("Time is up.");
+        }); 
     } else {
         console.error("timerCountdown function did not call");
     }
