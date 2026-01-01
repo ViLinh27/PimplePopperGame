@@ -46,6 +46,8 @@ Actual game logic will be done here. Which include:
 
 Font: Pixelify Sans from fonts.google.com
 
+Squishy wet sound of goo.wav by nathvandykOWI -- https://freesound.org/s/655814/ -- License: Creative Commons 0
+
 ---
 
 # Issues
@@ -118,3 +120,9 @@ add a pimple.remove() inside the click handler
 ## The score will not reset on next round
 
 with the new update score dsiplay function, that gets called in a reset score dsiplay function and that reset function goes into the back buttons that take you back to home. I tried putting it in either start or the stop buttons. That didn't work.
+
+## Fixing Global function use
+
+I tried using modules before but they never worked, so resorted to global funcs for convenience.
+
+I want to fix them after i get the basic mechanics down first.
