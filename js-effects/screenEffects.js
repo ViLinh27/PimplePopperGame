@@ -27,8 +27,6 @@ stopBtn.addEventListener('click',()=>{
     backaftergame.style.display = 'block';
     //clear time interval
     timerStop();
-    //show main screen;
-    //showScreen('main');
 });
 backaftergame.addEventListener('click',()=>{
     showScreen('main');

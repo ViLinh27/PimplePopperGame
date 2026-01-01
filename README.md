@@ -94,3 +94,23 @@ If distance calculated from formula is less than minimum, we have an overlap
 - only seems to work properly the first time
 - AFter a pause doesn't work
 - after redoing it doesn't seem to work either
+
+The easiest way I saw to make the stop button work is just take out the functionality that makes it go back to main screen after stopping the timer. It might have to do with how js likes to do things strictly in order and the stop button did too many things. So i just added a back button appear after the timer is stopped.
+
+## making the pimple buttons make the score go up
+
+### i can't see the score
+
+Since the score display is on a querySelectAll it's going to be an array-like object (i have mulitple things that need to display score). Looks like textContent doesn't like this since it's basically a node list. So I gotta specify the p inside the score div display i guess
+
+### a click on pimple make score go up and user sees it
+
+the click handler for the pimple click is correct i needed to update the html display after the score changes (which i did not do woops).
+
+### What should help
+
+make a function to handle score display to streamline the updating display in 2 different displays instead of queryselectorall since that doesn't like textcontent.
+
+### to make the pimples disappear when clicked
+
+add a pimple.remove() inside the click handler

@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-    //face and pimple stuff
+//face and pimple stuff
     const facecontainer = document.getElementById('faceContainer');
     const pimpleSrc = 'https://placehold.co/50x50';
     const numImgs = 5;
@@ -8,6 +7,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     //minimm separation dist of 60 makes 10px gap
     const MIN_DIST_SQUARED = Math.pow(60,2);
+
+    //score stuff
+    const myGamescoreDisplay = document.querySelector('#game-screen .my-score p');
+    const myGameOverscoreDisplay = document.querySelector('#gameover-screen .my-score p');
+    let myscore = 0;
 
     function getRndPos(max){
         //generate random positoin between 0 and max (exc)
@@ -76,6 +80,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 facecontainer.appendChild(pimple);
 
                 placedPimples.push({x:newX, y: newY});
+
+                pimple.addEventListener('click',()=>{
+                    console.log('pimple is clicked');//debug
+                    myscore++;
+                    updateScoreDisplay(myscore);
+                    pimple.remove();
+                })
             }else{
                 console.warn(`Could not find a safe spot for pimple ${i + 1} after ${MAX_ATTEMPTS} attempts.`);
                 //note: better to stop than crash
@@ -106,4 +117,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     //re-randomize pimples every few seconds
     setInterval(placeRndPimples, 5000);
-});
+
+    function updateScoreDisplay(newScore){
+        myscore = newScore;
+        if(myGameOverscoreDisplay){
+            myGameOverscoreDisplay.textContent = `${myscore}`;
+        }
+        if(myGamescoreDisplay){
+            myGamescoreDisplay.textContent = `${myscore}`;
+        }
+    }
+   updateScoreDisplay(myscore);
