@@ -1,3 +1,11 @@
+//global functions that come from other files:
+/**
+ * resetScoreDisplay
+ * timerCountdown
+ * timerStop
+ * */
+//need to fix global funcs later
+
 //screens
 const mainscreen = document.getElementById('start-screen');
 const gamescreen = document.getElementById('game-screen');
@@ -18,7 +26,6 @@ startBtn.addEventListener('click',()=>{
         timerCountdown(GAME_DURATION, ()=>{
             //make a game over screen
             showScreen('gameover');
-            //resetScoreDisplay();
         }); 
     } else {
         console.error("timerCountdown function did not call");
