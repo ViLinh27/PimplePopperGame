@@ -1,47 +1,56 @@
 const snoozeTimerBtn = document.getElementById('snooze-btn');
-    //Timer stuff
-    const timerDisplay = document.querySelector('.timer-display');
-    let timer;
-    let timeLeft= 0;
-    let remainingTimeWhenPaused = 0;
-    let isPaused = false;
-    let ringSound = null;
+//Timer stuff
+const timerDisplay = document.querySelector('.timer-display');
+let timer;
+let timeLeft= 0;
+let remainingTimeWhenPaused = 0;
+let isPaused = false;
+let ringSound = null;
 
-    function togglePause(){
-        isPaused = !isPaused;
-        snoozeTimerBtn.textContent = isPaused ? 'Resume' : 'Pause';
+function togglePause(){
+    isPaused = !isPaused;
+    snoozeTimerBtn.textContent = isPaused ? 'Resume' : 'Pause';
 
-        if(isPaused){
-            remainingTimeWhenPaused = timeLeft;
-        }
+    if(isPaused){
+        remainingTimeWhenPaused = timeLeft;
     }
+}
 
-    function timerCountdown(timerduration){
-        duration = timerduration || 10;//change later
-        clearInterval(timer);
+function timerCountdown(timerduration){
+    duration = timerduration || 10;//change later
+    clearInterval(timer);
 
-        isPaused = false;
-        timeLeft = duration;
-        timerDisplay.textContent = formatTime(timeLeft);
+    isPaused = false;
+    timeLeft = duration;
+    timerDisplay.textContent = formatTime(timeLeft);
 
-        timer = setInterval(()=>{
-            if(!isPaused && timeLeft > 0){
-                timeLeft--;
-                timerDisplay.textContent = formatTime(timeLeft);
+    timer = setInterval(()=>{
+        if(!isPaused && timeLeft > 0){
+            timeLeft--;
+            timerDisplay.textContent = formatTime(timeLeft);
 
-                if(timeLeft<=0){
-                    //play alarm sound
-                    new Notification('Popping Pimples', {
-                        body: 'You are done.'//change later
-                    });
-                    //show start screen again??
-                }
+            if(timeLeft<=0){
+                //play alarm sound
+                new Notification('Popping Pimples', {
+                    body: 'You are done.'//change later
+                });
+                //show start screen again??
             }
-        },1000);
-    }
+        }
+    },1000);
+}
 
-    function formatTime(seconds){
-        const mins = Math.floor(seconds/60).toString().padStart(2,'0');
-        const secs = (seconds % 60).toString().padStart(2,'0');
-        return `${mins}:${secs}`;
-    }
+function timerStop(){
+    clearInterval(timer);
+    timerDisplay.textContent = '00:00';
+    isPaused = false;
+    snoozeTimerBtn.querySelector('.btn-text').textContent = 'Snooze';
+}
+
+function formatTime(seconds){
+    const mins = Math.floor(seconds/60).toString().padStart(2,'0');
+    const secs = (seconds % 60).toString().padStart(2,'0');
+    return `${mins}:${secs}`;
+}
+
+snoozeTimerBtn.addEventListener('click',togglePause);

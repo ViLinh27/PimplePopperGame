@@ -20,6 +20,7 @@ startBtn.addEventListener('click',()=>{
 })
 stopBtn.addEventListener('click',()=>{
     //clear time interval
+    timerStop();
     //show main screen;
     showScreen('main');
 });

@@ -87,3 +87,10 @@ If distance calculated from formula is less than minimum, we have an overlap
 ### Attempt at using modules to export timerCountdown to screenEffects: FAILED
 
 - Gonna have to try global funcs to see what that does
+- Global functions work but will have to find another way to go about it later
+
+### Timer Stop func
+
+- only seems to work properly the first time
+- AFter a pause doesn't work
+- after redoing it doesn't seem to work either
