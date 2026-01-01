@@ -121,6 +121,10 @@ add a pimple.remove() inside the click handler
 
 with the new update score dsiplay function, that gets called in a reset score dsiplay function and that reset function goes into the back buttons that take you back to home. I tried putting it in either start or the stop buttons. That didn't work.
 
+## The pop sound only plays once when popping pimples
+
+It's a logic error with how the browser deals with sound apparently. Part of hte reason it only works once and igores subsequent pimple pops. If I click another pimple too fast compared to how long the audio is, then i only here the first pimple pop.
+
 ## Fixing Global function use
 
 I tried using modules before but they never worked, so resorted to global funcs for convenience.

@@ -82,7 +82,8 @@
                 placedPimples.push({x:newX, y: newY});
 
                 pimple.addEventListener('click',()=>{
-                    console.log('pimple is clicked');//debug
+                    //console.log('pimple is clicked');//debug
+                    playPopSound();
                     myscore++;
                     updateScoreDisplay(myscore);
                     pimple.remove();
@@ -111,6 +112,12 @@
         }//loop through images to make sure we go through correct num pimples
 
     }//placeRndPimples()
+
+    function playPopSound(){
+        const popSound = document.getElementById('pimplepop-sound');
+        popSound.currentTime = 0;
+        popSound.play().catch(e=>console.error('Error playing pimpe pop sound',e))
+    }
 
     //place pimple images and load
     placeRndPimples();
