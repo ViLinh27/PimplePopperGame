@@ -47,6 +47,10 @@
   display: none;
 }
 
+#back-after-game-btn {
+  display: none;
+}
+
 /*end of Screen content*/
 .face-container {
   background-image: url("https://placehold.co/600x400");

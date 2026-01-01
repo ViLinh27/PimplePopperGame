@@ -8,10 +8,11 @@ const stopBtn = document.getElementById('stop-btn');
 const startBtn = document.getElementById('start-btn');
 const backBtns = document.querySelectorAll('.back-btn');
 const creditsBtn = document.getElementById('credits-btn');
-
+const backaftergame = document.getElementById('back-after-game-btn');
 const GAME_DURATION = 10; //change later
 
 startBtn.addEventListener('click',()=>{
+    backaftergame.style.display = 'none';
     showScreen('game');
     if (typeof timerCountdown === 'function') {
         timerCountdown(GAME_DURATION, ()=>{
@@ -23,9 +24,13 @@ startBtn.addEventListener('click',()=>{
     }
 })
 stopBtn.addEventListener('click',()=>{
+    backaftergame.style.display = 'block';
     //clear time interval
     timerStop();
     //show main screen;
+    //showScreen('main');
+});
+backaftergame.addEventListener('click',()=>{
     showScreen('main');
 });
 backBtns.forEach(btn =>{
