@@ -127,4 +127,8 @@
             myGamescoreDisplay.textContent = `${myscore}`;
         }
     }
+
+    function resetScoreDisplay(){
+        updateScoreDisplay(0);
+    }
    updateScoreDisplay(myscore);

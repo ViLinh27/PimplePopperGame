@@ -18,6 +18,7 @@ startBtn.addEventListener('click',()=>{
         timerCountdown(GAME_DURATION, ()=>{
             //make a game over screen
             showScreen('gameover');
+            //resetScoreDisplay();
         }); 
     } else {
         console.error("timerCountdown function did not call");
@@ -30,10 +31,12 @@ stopBtn.addEventListener('click',()=>{
 });
 backaftergame.addEventListener('click',()=>{
     showScreen('main');
+    resetScoreDisplay();
 });
 backBtns.forEach(btn =>{
     btn.addEventListener('click',()=>{
         showScreen('main');
+        resetScoreDisplay();
     })
 })
 creditsBtn.addEventListener('click',()=>{

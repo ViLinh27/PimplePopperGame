@@ -114,3 +114,5 @@ make a function to handle score display to streamline the updating display in 2 
 ### to make the pimples disappear when clicked
 
 add a pimple.remove() inside the click handler
+
+## The score will not reset on next round
