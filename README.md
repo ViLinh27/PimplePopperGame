@@ -83,3 +83,7 @@ If distance calculated from formula is less than minimum, we have an overlap
 - #### Wrong counter in attempt to place pimples loop
 
 * I wasn't iterating the right counter inside one of the loops to count the number of attempts made to place the pimples correctly. So another typo
+
+### Attempt at using modules to export timerCountdown to screenEffects: FAILED
+
+- Gonna have to try global funcs to see what that does

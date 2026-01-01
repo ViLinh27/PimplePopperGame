@@ -8,9 +8,15 @@ const startBtn = document.getElementById('start-btn');
 const backBtn = document.getElementById('back-btn');
 const creditsBtn = document.getElementById('credits-btn');
 
+const GAME_DURATION = 10; //change later
+
 startBtn.addEventListener('click',()=>{
     showScreen('game');
-    
+    if (typeof timerCountdown === 'function') {
+        timerCountdown(GAME_DURATION); 
+    } else {
+        console.error("timerCountdown function did not call");
+    }
 })
 stopBtn.addEventListener('click',()=>{
     //clear time interval
