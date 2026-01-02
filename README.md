@@ -151,6 +151,19 @@ I only called the setGame duration function once when the game loads. No wonder,
 
 the manual set of the 30 sec radio button in the settings function is also flawed to begin with because even if call this again it's gonna make the choice always be 30sec.
 
+# Notes on how to incorporate leaderboard system
+
+- Use Danial Jumagaliyev's my leaderboards api
+- create new separate leaderboards for each time duration (30,60,120sec)
+- for each leadboard, copy and save pbulic and secret key (public key used to submit and retrive scores)
+- implment high scores in game by using HTTP requests (POST to submit, GET to retrieve) with API.
+- since browser game, this will be making raw API calls to service's endpoints
+- when game of some duration ends, game logic SHOULD use coressponding public key to submit score to correct leaderobard
+- when eisplaying leaderboard, game should fetch entries using pbulic key for the selected game duration.
+- store the mult public keys in game somwehre
+
+* conditional logic to see which public key to use
+
 # Featurese to add in the future (maybe)
 
 - high score board for people to add their names to
