@@ -125,6 +125,10 @@ with the new update score dsiplay function, that gets called in a reset score ds
 
 It's a logic error with how the browser deals with sound apparently. Part of hte reason it only works once and igores subsequent pimple pops. If I click another pimple too fast compared to how long the audio is, then i only here the first pimple pop.
 
+The solution that worked was cloning the existing pop sound asset in js to make sure each pimple click had their own asset to work with.
+
+The use of oneded event is to make sure the asset gets cleaned up when done. (oneded is when audio is done, remove is for cleanup)
+
 ## Fixing Global function use
 
 I tried using modules before but they never worked, so resorted to global funcs for convenience.

@@ -113,10 +113,17 @@
 
     }//placeRndPimples()
 
+    const masterpopSound = document.getElementById('pimplepop-sound');
     function playPopSound(){
-        const popSound = document.getElementById('pimplepop-sound');
-        popSound.currentTime = 0;
-        popSound.play().catch(e=>console.error('Error playing pimpe pop sound',e))
+        if(masterpopSound){//check if actual sound exists
+            const popSound = masterpopSound.cloneNode();
+            popSound.currentTime = 0;
+            popSound.play().catch(e=>console.error('Error playing pimpe pop sound',e))
+            popSound.oneded = ()=>{
+                //clean up after audio done
+                popSound.remove();
+            }
+        }
     }
 
     //place pimple images and load
