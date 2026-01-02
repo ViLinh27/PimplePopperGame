@@ -1,8 +1,8 @@
 //face and pimple stuff
     const facecontainer = document.getElementById('faceContainer');
     const pimpleSrc = 'https://placehold.co/50x50';
-    export const numImgs = 5;//change later
-    export const pimplePlacingInterval = 5000;//change later
+    export const numImgs = 10;//change later
+    export const pimplePlacingInterval = 4000;//change later
     const PIMPLE_WIDTH = 50;
     const PIMPLE_HEIGHT = 50;
 
