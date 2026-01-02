@@ -145,7 +145,11 @@ had issues with circular dependencies so had to separate the settingGameDuration
 
 Issue now is fixing the default checked radiobox from unchecking when something else is selected. I needed the same name for the radio buttons group.
 
----
+### the radio buttons keep at the start and don't change when new time selected. WHy?
+
+I only called the setGame duration function once when the game loads. No wonder, changing the game time in settings doesn't do anything (click another radio button).
+
+the manual set of the 30 sec radio button in the settings function is also flawed to begin with because even if call this again it's gonna make the choice always be 30sec.
 
 # Featurese to add in the future (maybe)
 

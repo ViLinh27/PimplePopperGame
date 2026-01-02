@@ -5,7 +5,6 @@ let timer;
 let timeLeft= 0;
 let remainingTimeWhenPaused = 0;
 let isPaused = false;
-let ringSound = null;
 
 function togglePause(){
     isPaused = !isPaused;

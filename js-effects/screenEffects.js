@@ -14,16 +14,15 @@ const backBtns = document.querySelectorAll('.back-btn');
 const creditsBtn = document.getElementById('credits-btn');
 const settingsbtn = document.getElementById('settings-btn');
 const backaftergame = document.getElementById('back-after-game-btn');
-const GAME_DURATION = setGameDuration();
 
 startBtn.addEventListener('click',()=>{
+    let gamedur = setGameDuration();
     backaftergame.style.display = 'none';
     showScreen('game');
     if (typeof timerCountdown === 'function') {
-        console.log("GAME DURATION before countdown call: "+GAME_DURATION);//debug
-        timerCountdown(GAME_DURATION, ()=>{
-            console.log("GAME DURATION after countdown call: "+GAME_DURATION);//debug
+        timerCountdown(gamedur, ()=>{
             //make a game over screen
+            //resetScoreDisplay();
             showScreen('gameover');
         }); 
     } else {
