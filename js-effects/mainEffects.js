@@ -143,7 +143,7 @@
         }
     }
 
-    function resetScoreDisplay(){
+    export function resetScoreDisplay(){
         updateScoreDisplay(0);
     }
    updateScoreDisplay(myscore);
