@@ -134,3 +134,12 @@ The use of oneded event is to make sure the asset gets cleaned up when done. (on
 I tried using modules before but they never worked, so resorted to global funcs for convenience.
 
 I want to fix them after i get the basic mechanics down first.
+
+---
+
+# Featurese to add in the future (maybe)
+
+- high score board for people to add their names to
+- background music for main menu and game over screen
+- customize the face
+- gross animation for pimple pop
