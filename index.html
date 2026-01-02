@@ -89,9 +89,11 @@
                     <h2>Settings</h2>
                     <h3>Game duration</h3>
                     <div class="interactive-content">
-                        <input type="radio" id="30secgame" value=""><label for="30secgame">30 seconds</label><br>
+                        <input type="radio" name="game_duration" id="30secgame" value="30" checked><label for="30secgame">30 seconds</label><br>
                         <!-- 60 sec-->
+                        <input type="radio" name="game_duration" id="60secgame" value="60"><label for="60secgame">60 seconds</label><br>
                         <!--120 -->
+                        <input type="radio" name="game_duration" id="120secgame" value="120"><label for="120secgame">120 seconds</label><br>
                     </div>
                     <button class="back-btn">
                         <p>Back Home</p>
@@ -102,5 +104,6 @@
         <script type="module" src="./js-effects/mainEffects.js"></script>
         <script type="module" src="./js-effects/screenEffects.js"></script>
         <script type="module" src="./js-effects/timerEffects.js"></script>
+        <script type="module" src="./js-effects/settings.js"></script>
     </body>
 </html>

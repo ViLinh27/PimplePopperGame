@@ -1,5 +1,6 @@
 import { resetScoreDisplay } from "./mainEffects.js";
 import { timerCountdown,timerStop } from "./timerEffects.js";
+import { setGameDuration } from "./settings.js";
 //screens
 const mainscreen = document.getElementById('start-screen');
 const gamescreen = document.getElementById('game-screen');
@@ -13,13 +14,15 @@ const backBtns = document.querySelectorAll('.back-btn');
 const creditsBtn = document.getElementById('credits-btn');
 const settingsbtn = document.getElementById('settings-btn');
 const backaftergame = document.getElementById('back-after-game-btn');
-export const GAME_DURATION = 10; //change later
+const GAME_DURATION = setGameDuration();
 
 startBtn.addEventListener('click',()=>{
     backaftergame.style.display = 'none';
     showScreen('game');
     if (typeof timerCountdown === 'function') {
+        console.log("GAME DURATION before countdown call: "+GAME_DURATION);//debug
         timerCountdown(GAME_DURATION, ()=>{
+            console.log("GAME DURATION after countdown call: "+GAME_DURATION);//debug
             //make a game over screen
             showScreen('gameover');
         }); 

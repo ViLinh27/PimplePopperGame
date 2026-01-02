@@ -17,7 +17,7 @@ function togglePause(){
 }
 
 export function timerCountdown(timerduration, callback){
-    const duration = timerduration || 10;//change later
+    const duration = timerduration;
     clearInterval(timer);
 
     isPaused = false;

@@ -121,7 +121,7 @@ add a pimple.remove() inside the click handler
 
 with the new update score dsiplay function, that gets called in a reset score dsiplay function and that reset function goes into the back buttons that take you back to home. I tried putting it in either start or the stop buttons. That didn't work.
 
-It seemed that adding .js to the imports made the modules work so that helpd avoid global stuff.
+It seemed that adding .js to the imports made the modules work so that helpd avoid global functions. Global vars still need work
 
 ## The pop sound only plays once when popping pimples
 
@@ -136,6 +136,14 @@ The use of oneded event is to make sure the asset gets cleaned up when done. (on
 I tried using modules before but they never worked, so resorted to global funcs for convenience.
 
 I want to fix them after i get the basic mechanics down first.
+
+Part of global function import issues was the missing .js in the import statements.
+
+## Customize the time duration for the game
+
+had issues with circular dependencies so had to separate the settingGameDuration fucntion and the game duration variable that stored the new time (from teh constant declared in screenEffects which caused the circular dependency).
+
+Issue now is fixing the default checked radiobox from unchecking when something else is selected. I needed the same name for the radio buttons group.
 
 ---
 
