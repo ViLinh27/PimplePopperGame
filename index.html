@@ -16,23 +16,23 @@
         <div class="pixelify-sans-myFont">
             <div class="content-wrapper">
                 <!-- start screen-->
-                 <div id="start-screen">
+                 <div class="game-frame" id="start-screen">
                     <div class="interactive-content">
                         <h2>It's pimple popping time</h2>
                         <button id="start-btn">
-                            <p>Start Popping</p>
+                            <p class="btn-text">Start Popping</p>
                         </button>
                         <button id="credits-btn">
-                            <p>Credits</p>
+                            <p class="btn-text">Credits</p>
                         </button>
                         <button id="settings-btn">
-                            <p>Settings</p>
+                            <p class="btn-text">Settings</p>
                         </button>
                     </div>
                  </div><!-- start screen-->
 
                 <!-- game screen-->
-                <div id="game-screen">
+                <div class="game-frame" id="game-screen">
                     <!--timer clock -->
                     <div class="interactive-content">
                         <div class="timer-display">
@@ -59,7 +59,7 @@
                 </div><!-- game screen-->
 
                 <!-- game over screen-->
-                <div id="gameover-screen">
+                <div class="game-frame" id="gameover-screen">
                     <div class="interactive-content">
                         <h2>Game Over</h2>
                         <h3>Time is up</h3>
@@ -71,38 +71,52 @@
                         </div>
                         <!-- put score here i guess-->
                         <button class="back-btn">
-                            <p>Back Home</p>
+                            <p class="btn-text">Back Home</p>
                         </button>
                     </div>
                 </div>
                 <!-- credits screen-->
-                <div id="credits-screen">
+                <div class="game-frame" id="credits-screen">
                     <h2>Credits</h2>
                     <p>
                         Thank you to Heidi. I don't know if you still watch pimple popping videos,
                         but I thought of you when I made this.
+                    </p>
+                    <h3>Art</h3>
+                    <p>
+                        Thank you to Anh for doing the art for the face and input on pixel art. Find her at @bizbunny_pixel on 
+                        instagram.
+                    </p>
+                    <p>
+                        I did the pimple art.
                     </p>
                     <h3>Sound</h3>
                     <p>
                         Pimple Popping Sound: Squishy wet sound of goo.wav by nathvandykOWI -- https://freesound.org/s/655814/ -- License: Creative Commons 0
                     </p>
                     <button class="back-btn">
-                        <p>Back Home</p>
+                        <p class="btn-text">Back Home</p>
                     </button>
                 </div><!-- credits screen-->
                 <!-- settings-->
-                <div id="settings-screen">
+                <div class="game-frame" id="settings-screen">
                     <h2>Settings</h2>
                     <h3>Game duration</h3>
                     <div class="interactive-content">
-                        <input type="radio" name="game_duration" id="30secgame" value="30"><label for="30secgame">30 seconds</label><br>
+                        <div>
+                            <input type="radio" name="game_duration" id="30secgame" value="30"><label for="30secgame">30 seconds</label><br>
+                        </div>
                         <!-- 60 sec-->
-                        <input type="radio" name="game_duration" id="60secgame" value="60"><label for="60secgame">60 seconds</label><br>
+                         <div>
+                            <input type="radio" name="game_duration" id="60secgame" value="60"><label for="60secgame">60 seconds</label><br>
+                         </div>
                         <!--120 -->
-                        <input type="radio" name="game_duration" id="120secgame" value="120"><label for="120secgame">120 seconds</label><br>
+                        <div>
+                            <input type="radio" name="game_duration" id="120secgame" value="120"><label for="120secgame">120 seconds</label><br>
+                        </div>
                     </div>
                     <button class="back-btn">
-                        <p>Back Home</p>
+                        <p class="btn-text">Back Home</p>
                     </button>
                 </div><!-- end of settings-->
             </div>

@@ -34,22 +34,25 @@
     width:95%;
     position: relative;
 }
+.interactive-content,
+.game-frame{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
 #start-screen{
     display:block;
 }
-#game-screen{
-    display: none;
-}
-#credits-screen{
-    display:none;
-}
-#gameover-screen{
-    display:none;
-}
-#back-after-game-btn{
-    display:none;
-}
-#settings-screen{
+#game-screen,
+#credits-screen,
+#gameover-screen,
+#back-after-game-btn,
+#settings-screen
+{
     display: none;
 }
 /*end of Screen content*/
@@ -72,6 +75,23 @@
     position: absolute;//so we can use top and left
     background-color: pink;//change later
     transition: top 0.5s, left 0.5s;
+}
+
+button{
+    margin:0.5vh;
+    border:none;
+    border-radius:10%;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 12px;
+    background-color: rgb(147, 135, 200);//change later
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    &:hover{
+        background-color: rgb(222, 143, 234); //change later
+        transform: scale(1.05);
+    }
+}
+.btn-text{
+    background-color:inherit;
 }
 
 

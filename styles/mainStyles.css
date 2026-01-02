@@ -31,26 +31,24 @@
   position: relative;
 }
 
+.interactive-content,
+.game-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
 #start-screen {
   display: block;
 }
 
-#game-screen {
-  display: none;
-}
-
-#credits-screen {
-  display: none;
-}
-
-#gameover-screen {
-  display: none;
-}
-
-#back-after-game-btn {
-  display: none;
-}
-
+#game-screen,
+#credits-screen,
+#gameover-screen,
+#back-after-game-btn,
 #settings-screen {
   display: none;
 }
@@ -75,4 +73,22 @@
   position: absolute;
   background-color: pink;
   transition: top 0.5s, left 0.5s;
+}
+
+button {
+  margin: 0.5vh;
+  border: none;
+  border-radius: 10%;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 12px;
+  background-color: rgb(147, 135, 200);
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+button:hover {
+  background-color: rgb(222, 143, 234);
+  transform: scale(1.05);
+}
+
+.btn-text {
+  background-color: inherit;
 }/*# sourceMappingURL=mainStyles.css.map */
