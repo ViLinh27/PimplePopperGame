@@ -16,8 +16,8 @@ function togglePause(){
     }
 }
 
-function timerCountdown(timerduration, callback){
-    duration = timerduration || 10;//change later
+export function timerCountdown(timerduration, callback){
+    const duration = timerduration || 10;//change later
     clearInterval(timer);
 
     isPaused = false;
@@ -41,7 +41,7 @@ function timerCountdown(timerduration, callback){
     },1000);
 }
 
-function timerStop(){
+export function timerStop(){
     clearInterval(timer);
     timerDisplay.textContent = '00:00';
     isPaused = false;
