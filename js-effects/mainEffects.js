@@ -1,7 +1,8 @@
 //face and pimple stuff
     const facecontainer = document.getElementById('faceContainer');
     const pimpleSrc = 'https://placehold.co/50x50';
-    const numImgs = 5;
+    export const numImgs = 5;//change later
+    export const pimplePlacingInterval = 5000;//change later
     const PIMPLE_WIDTH = 50;
     const PIMPLE_HEIGHT = 50;
 
@@ -130,7 +131,7 @@
     placeRndPimples();
 
     //re-randomize pimples every few seconds
-    setInterval(placeRndPimples, 5000);
+    setInterval(placeRndPimples, pimplePlacingInterval);
 
     function updateScoreDisplay(newScore){
         myscore = newScore;

@@ -17,7 +17,7 @@ const startBtn = document.getElementById('start-btn');
 const backBtns = document.querySelectorAll('.back-btn');
 const creditsBtn = document.getElementById('credits-btn');
 const backaftergame = document.getElementById('back-after-game-btn');
-const GAME_DURATION = 10; //change later
+export const GAME_DURATION = 10; //change later
 
 startBtn.addEventListener('click',()=>{
     backaftergame.style.display = 'none';
