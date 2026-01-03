@@ -166,6 +166,8 @@ the manual set of the 30 sec radio button in the settings function is also flawe
 
 * reddit thread that talks about security with leaderboards: https://www.reddit.com/r/gamedev/comments/swxdim/leaderboards_a_simple_way_to_implement_online/#
 
+* potential good option for backend service: SUPABASE: open source alternative to firebase with a free tier
+
 # Featurese to add in the future (maybe)
 
 - high score board for people to add their names to
