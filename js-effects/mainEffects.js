@@ -12,7 +12,7 @@
     //score stuff
     const myGamescoreDisplay = document.querySelector('#game-screen .my-score p');
     const myGameOverscoreDisplay = document.querySelector('#gameover-screen .my-score p');
-    let myscore = 0;
+    export let myscore = 0;
 
     function getRndPos(max){
         //generate random positoin between 0 and max (exc)

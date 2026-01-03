@@ -10,9 +10,9 @@
     font-weight:400;
     font-style: normal;
     //--window size --//
-    height:100vh;
+    height:inherit;
     width:100%;
-    overflow: hidden;
+    overflow-x: hidden;
     //-- display --//
     display: flex;
     flex-direction: column;
